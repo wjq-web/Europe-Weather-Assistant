@@ -3,6 +3,9 @@ name: Europe Weather
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '30 22 * * *'
+
 jobs:
   weather:
     runs-on: ubuntu-latest
