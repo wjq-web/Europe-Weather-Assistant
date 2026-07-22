@@ -8,17 +8,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.12'
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
-    - name: Install packages
-      run: |
-        pip install openpyxl
+      - name: Install packages
+        run: pip install openpyxl
 
-    - name: Run weather
-      run: |
-        python europe_weather.py
+      - name: Update weather
+        run: python europe_weather.py
+
+      - name: Create alerts
+        run: python travel_alerts.py
+
+      - name: Create text brief
+        run: python travel_brief.py
+
+      - name: Create HTML brief
+        run: python travel_brief_html.py
+
+      - name: Save generated files
+        uses: actions/upload-artifact@v4
+        with:
+          name: Europe-Weather-Results
+          path: |
+            Europe_Weather.xlsx
+            Europe_Weather_Alerts.txt
+            Europe_Travel_Brief.txt
+            Europe_Travel_Brief.html
+          if-no-files-found: error
