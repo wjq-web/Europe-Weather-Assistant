@@ -220,7 +220,7 @@ for city in cities:
         "%Y-%m-%d"
     ).date()
 
-      if start_date <= today <= end_date:
+    if start_date <= today <= end_date:
         current_city = city
         break
 
