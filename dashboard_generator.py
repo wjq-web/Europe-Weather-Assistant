@@ -202,7 +202,76 @@ for city in cities:
 upcoming_cities.sort(key=lambda item: item[0])
 
 next_city = upcoming_cities[0][1] if upcoming_cities else None
+current_city = None
 
+for city in cities:
+    dates_text = city.get("dates", "").strip()
+
+    if "~" not in dates_text:
+        continue
+
+    start_date = datetime.strptime(
+        dates_text.split("~")[0].strip(),
+        "%Y-%m-%d"
+    ).date()
+
+    end_date = datetime.strptime(
+        dates_text.split("~")[1].strip(),
+        "%Y-%m-%d"
+    ).date()
+
+      if start_date <= today <= end_date:
+        current_city = city
+        break
+
+
+current_city_card = """
+<div style="
+    flex:1;
+    min-width:260px;
+    background:#eef6ff;
+    padding:14px;
+    border-radius:10px;
+">
+<h3>📍 本站</h3>
+<p>旅程尚未開始</p>
+</div>
+"""
+
+if current_city:
+    current_city_card = f"""
+<div style="
+    flex:1;
+    min-width:260px;
+    background:#eef6ff;
+    padding:14px;
+    border-radius:10px;
+">
+<h3>📍 本站</h3>
+<p><strong>{current_city.get("city", "")}, {current_city.get("country", "")}</strong></p>
+<p>日期：{current_city.get("dates", "")}</p>
+<p>住宿：{current_city.get("hotel", "") or "尚未填寫"}</p>
+<p>交通：{current_city.get("transport", "") or "尚未填寫"}</p>
+</div>
+"""
+next_city_card = ""
+
+if next_city:
+    next_city_card = f"""
+<div style="
+    flex:1;
+    min-width:260px;
+    background:#eef6ff;
+    padding:14px;
+    border-radius:10px;
+">
+<h3>➡️ 下一站</h3>
+<p><strong>{next_city.get("city", "")}, {next_city.get("country", "")}</strong></p>
+<p>日期：{next_city.get("dates", "")}</p>
+<p>住宿：{next_city.get("hotel", "") or "尚未填寫"}</p>
+<p>交通：{next_city.get("transport", "") or "尚未填寫"}</p>
+</div>
+"""
 html = f"""
 
 <!DOCTYPE html>
@@ -284,20 +353,15 @@ h1, h2 {{
 ">{alert_text}</pre>
 </div>
 ''' if alert_text else ''}
-{f'''
 <div style="
-    background:#eef6ff;
-    padding:14px;
-    border-radius:10px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
     margin:14px 0;
 ">
-<h3>📍 下一站</h3>
-<p><strong>{next_city.get("city", "")}, {next_city.get("country", "")}</strong></p>
-<p>日期：{next_city.get("dates", "")}</p>
-<p>住宿：{next_city.get("hotel", "") or "尚未填寫"}</p>
-<p>交通：{next_city.get("transport", "") or "尚未填寫"}</p>
+{current_city_card}
+{next_city_card}
 </div>
-''' if next_city else ''}
 
 <p>
 🏨 訂房進度：{hotel_count} / {total_cities}<br>
