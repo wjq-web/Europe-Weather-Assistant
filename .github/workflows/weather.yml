@@ -45,5 +45,5 @@ jobs:
             Europe_Weather_Alerts.txt
             Europe_Travel_Brief.txt
             Europe_Travel_Brief.html
-            Europe_Dashboard.html
+            index.html
           if-no-files-found: error
