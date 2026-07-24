@@ -254,6 +254,12 @@ if current_city:
 <p>交通：{current_city.get("transport", "") or "尚未填寫"}</p>
 </div>
 """
+
+next_city_weather = None
+
+if next_city:
+    next_city_name = next_city.get("city", "")
+    next_city_weather = weather_by_city.get(next_city_name)
 next_city_card = ""
 
 if next_city:
@@ -270,6 +276,17 @@ if next_city:
 <p>日期：{next_city.get("dates", "")}</p>
 <p>住宿：{next_city.get("hotel", "") or "尚未填寫"}</p>
 <p>交通：{next_city.get("transport", "") or "尚未填寫"}</p>
+
+{f"""
+<p>
+🌤 {next_city_weather.get('min_temp','')}
+~ {next_city_weather.get('max_temp','')}°C
+</p>
+
+<p>
+☁️ {next_city_weather.get('weather','')}
+</p>
+""" if next_city_weather else ""}
 </div>
 """
 html = f"""
