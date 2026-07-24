@@ -276,7 +276,16 @@ if next_city:
 <h3>➡️ 下一站</h3>
 <p><strong>{next_city.get("city", "")}, {next_city.get("country", "")}</strong></p>
 <p>日期：{next_city.get("dates", "")}</p>
-<p>住宿：{next_city.get("hotel", "") or "尚未填寫"}</p>
+<p>
+🏨 {
+"已訂房" if next_city.get("hotel", "").strip()
+else "尚未訂房"
+}
+</p>
+
+<p>
+{next_city.get("hotel", "") or "尚未填寫"}
+</p>
 <p>交通：{next_city.get("transport", "") or "尚未填寫"}</p>
 
 {f"""
@@ -288,7 +297,16 @@ if next_city:
 <p>
 ☁️ {next_city_weather.get('weather','')}
 </p>
+
+<p>
+☂️ 降雨機率：{next_city_weather.get('rain','')}
+</p>
+
+<p>
+⚠️ {next_city_weather.get('advice','')}
+</p>
 """ if next_city_weather else ""}
+
 </div>
 """
 html = f"""
