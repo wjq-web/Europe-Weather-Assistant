@@ -9,10 +9,18 @@ from openpyxl.styles import Font
 
 CITIES = [
     "Vienna",
-    "Prague",
-    "Bratislava",
-    "Budapest",
+    "Salzburg",
     "Munich",
+    "Nuremberg",
+    "Leipzig",
+    "Berlin",
+    "Dresden",
+    "Prague",
+    "Krakow",
+    "Kosice",
+    "Miskolc",
+    "Budapest",
+    "Bratislava",
 ]
 
 excel_file = Path(__file__).parent / "Europe_Weather.xlsx"
