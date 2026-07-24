@@ -263,6 +263,7 @@ h1, h2 {{
 
 <div class="header">
 <h1>🌍 {trip_name}</h1>
+<p>🕒 更新時間：{datetime.now().strftime("%Y-%m-%d %H:%M")}</p>
 <p>{countdown_text}</p>
 {f'''
 <div style="
@@ -326,7 +327,6 @@ h1, h2 {{
 {missing_attractions_html}
 </p>
 
-<p>更新時間：{datetime.now().strftime("%Y-%m-%d %H:%M")}</p>
 </div>
 """
 
