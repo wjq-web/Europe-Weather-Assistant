@@ -1,0 +1,126 @@
+{
+  "trip_name": "Central Europe 2026",
+  "departure_date": "2026-07-30",
+  "cities": [
+    {
+      "city": "Vienna",
+      "country": "Austria",
+      "dates": "2026-08-01 ~ 2026-08-03",
+      "hotel": "kevin booked",
+      "transport": "3 day pass",
+      "booked_attractions": [],
+      "notes": ""
+    },
+ {
+      "city": "Salzburg",
+      "country": "Austria",
+      "dates": "2026-08-04 ~ 2026-08-07",
+      "hotel": "kevin booked",
+      "transport": "7 day pass",
+      "booked_attractions": [],
+      "notes": ""
+    },
+ {
+      "city": "Munich",
+      "country": "Germany",
+      "dates": "2026-08-08 ~ 2026-08-10",
+      "hotel": "kevin booked",
+      "transport": "D-Ticket",
+      "booked_attractions": [],
+      "notes": ""
+    },
+ {
+      "city": "Nuremberg",
+      "country": "Germany",
+      "dates": "2026-08-12 ~ 2026-08-13",
+      "hotel": "kevin booked",
+      "transport": "D-Ticket",
+      "booked_attractions": [],
+      "notes": ""
+    },
+ {
+      "city": "Leipzig",
+      "country": "Germany",
+      "dates": "2026-08-14 ~ 2026-08-15",
+      "hotel": "laowangdaiding",
+      "transport": "D-Ticket",
+      "booked_attractions": [],
+      "notes": ""
+    },
+ {
+      "city": "Berlin",
+      "country": "Germany",
+      "dates": "2026-08-16 ~ 2026-08-19",
+      "hotel": "laowangdaiding",
+      "transport": "D-Ticket",
+      "booked_attractions": [],
+      "notes": ""
+    },
+ {
+      "city": "Dresden",
+      "country": "Germany",
+      "dates": "2026-08-20 ~ 2026-08-21",
+      "hotel": "laowangdaiding",
+      "transport": "D-Ticket",
+      "booked_attractions": [],
+      "notes": ""
+    },
+ 
+ {
+      "city": "Prague",
+      "country": "Czech Republic",
+      "dates": "2026-08-23 ~ 2026-08-27",
+      "hotel": "laowangdaiding",
+      "transport": "Czech cash",
+      "booked_attractions": [],
+      "notes": ""
+    },
+ {
+      "city": "Kraków",
+      "country": "poland",
+      "dates": "2026-08-28 ~ 2026-08-30",
+      "hotel": "laowangdaiding",
+      "transport": "Czech cash",
+      "booked_attractions": [],
+      "notes": ""
+    },
+ {
+      "city": "Košice",
+      "country": "Slovakia",
+      "dates": "2026-08-31 ~ 2026-09-02",
+      "hotel": "",
+      "transport": "",
+      "booked_attractions": [],
+      "notes": ""
+    },
+ {
+      "city": "Miskolc",
+      "country": "Hungary",
+      "dates": "2026-09-03 ~ 2026-09-05",
+      "hotel": "",
+      "transport": "",
+      "booked_attractions": [],
+      "notes": ""
+    },
+ {
+      "city": "Budapest",
+      "country": "Hungary",
+      "dates": "2026-09-06 ~ 2026-09-10",
+      "hotel": "",
+      "transport": "",
+      "booked_attractions": [],
+      "notes": ""
+    },
+
+ {
+      "city": "Bratislava",
+      "country": "Slovakia",
+      "dates": "2026-09-11 ~ 2026-09-13",
+      "hotel": "",
+      "transport": "",
+      "booked_attractions": [],
+      "notes": ""
+    }
+    
+  ]
+}
