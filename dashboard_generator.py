@@ -225,16 +225,18 @@ for city in cities:
         break
 
 
-current_city_card = """
+current_city_card = f"""
 <div style="
     flex:1;
     min-width:260px;
-    background:#eef6ff;
+    background:#eefaf0;
     padding:14px;
     border-radius:10px;
 ">
 <h3>📍 本站</h3>
-<p>旅程尚未開始</p>
+<p>⏳ 旅程尚未開始</p>
+<p>出發日期：{departure_date_text}</p>
+<p>{countdown_text}</p>
 </div>
 """
 
