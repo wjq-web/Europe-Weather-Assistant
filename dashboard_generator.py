@@ -52,7 +52,7 @@ if weather_file.exists():
                 "advice": advice,
             }
 
-
+print(city, rain, advice)
 trip_name = trip_data.get("trip_name", "Europe Trip")
 departure_date_text = trip_data.get("departure_date", "")
 
