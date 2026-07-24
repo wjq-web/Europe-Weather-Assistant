@@ -8,7 +8,11 @@
       "dates": "2026-08-01 ~ 2026-08-03",
       "hotel": "kevin booked",
       "transport": "3 day pass",
-      "booked_attractions": [],
+      "booked_attractions": [
+  "Schönbrunn Palace",
+  "Belvedere Palace",
+  "St. Stephen's Cathedral"
+],
       "notes": ""
     },
  {
