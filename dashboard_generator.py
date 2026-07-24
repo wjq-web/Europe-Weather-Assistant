@@ -10,7 +10,7 @@ folder = Path(__file__).parent
 trip_file = folder / "trip_data.json"
 weather_file = folder / "Europe_Weather.xlsx"
 alert_file = folder / "Europe_Weather_Alerts.txt"
-dashboard_file = folder / "Europe_Dashboard.html"
+dashboard_file = folder / "index.html"
 
 
 # 讀取旅行資料
