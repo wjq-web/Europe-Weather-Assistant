@@ -32,6 +32,9 @@ jobs:
 
       - name: Create HTML brief
         run: python travel_brief_html.py
+        
+      - name: Create dashboard
+        run: python dashboard_generator.py
 
       - name: Save generated files
         uses: actions/upload-artifact@v4
@@ -42,4 +45,5 @@ jobs:
             Europe_Weather_Alerts.txt
             Europe_Travel_Brief.txt
             Europe_Travel_Brief.html
+            Europe_Dashboard.html
           if-no-files-found: error
