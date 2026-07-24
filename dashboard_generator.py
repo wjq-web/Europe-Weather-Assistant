@@ -93,6 +93,10 @@ attraction_count = sum(
     1 for city in cities
     if city.get("booked_attractions", [])
 )
+total_attractions = sum(
+    len(city.get("booked_attractions", []))
+    for city in cities
+)
 
 def make_progress_bar(done, total, color):
     if total == 0:
@@ -309,6 +313,7 @@ h1, h2 {{
 🎫 景點進度：{attraction_count} / {total_cities}<br>
 {attraction_progress}
 </p>
+<p>🎟 已填景點總數：{total_attractions}</p>
 
 <h3>⚠ 尚未完成</h3>
 
