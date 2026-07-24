@@ -292,12 +292,7 @@ h1, h2 {{
 <p>日期：{next_city.get("dates", "")}</p>
 <p>住宿：{next_city.get("hotel", "") or "尚未填寫"}</p>
 <p>交通：{next_city.get("transport", "") or "尚未填寫"}</p>
-{f"""
-<p>🌤 {next_city_weather.get('min_temp','')} ~ {next_city_weather.get('max_temp','')}°C</p>
-<p>☁️ {next_city_weather.get('weather','')}</p>
-""" if next_city_weather else ""}
-</div>
-''' if next_city else ''}
+
 
 <p>
 🏨 訂房進度：{hotel_count} / {total_cities}<br>
